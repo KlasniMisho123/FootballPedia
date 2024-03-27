@@ -1,0 +1,53 @@
+.background-pic {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: -8px;
+  object-fit: fill;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.web-title {
+  color: white;
+  font-family: sans-serif;
+}
+
+.btn-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 130px;
+}
+
+.homepage-btn {
+  height: 35px;
+  width: 15%;
+  min-width: 100px; 
+  border: 0px transparent solid;
+  border-radius: 36px;
+  background-color: white;
+}
+.homepage-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #76ABAE;
+  color: white;
+}
+
+
+
+.title-ball {
+    height: 100px;
+    width: 160px;
+}

@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-div {
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    color: #78A083;
+    font-size: 56px;
+    font-family: "Acme", sans-serif;
+}
+
+.submit-btn {
+    background-color: #78A083;
+    border: 0px black solid;
+    width: 90px;
+    border-radius: 32px;
+    height: 30px;
+    color:  white;
+  }
+  
+  .submit-btn:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: #45a049;
+    opacity: 80%;
+    border: 0px black solid;
+  }
+
+  .search-flex {
+    display: flex;
+    gap: 10px;
+  }
+

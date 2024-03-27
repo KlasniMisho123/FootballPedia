@@ -1,0 +1,33 @@
+.header {
+    text-align: center;
+    color: #78A083;
+    font-size: 56px;
+    font-family: "Acme", sans-serif;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+.main-content {
+  display: flex;
+}
+
+.league-div {
+display: flex;
+flex-direction: column;
+gap: 30px;
+width: 30%; /* 30%/40%/50%  */
+}
+
+.league {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.premier-league {
+  color: #3D195B;
+}
