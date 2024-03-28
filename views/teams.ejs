@@ -4,27 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FootballPedia ⚽ | teams</title>
-    <link rel="stylesheet" href="../public/styles/teams.css">
+    <link rel="stylesheet" href="/styles/teams.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container"> 
-  <div class="header-div">
-    <div>
-      <h1 class="header">Teams</h1>
+    <div class="header-div">
+      <div>
+        <h1 class="header">Teams</h1>
+      </div>
+      <form class="search-flex" method="POST">
+        <input type="text" placeholder="Enter Team Name" id="teamNameInput" name="teamName">
+        <button class="submit-btn" type="submit"> Submit </button>
+      </form>
     </div>
-    <div class="search-flex">
-      <input type="search" placeholder="Enter Team Name">
-      <button class="submit-btn"> Submit </button>
-    </div>
-  </div>
 
-  <div class="content-div">
-
-  </div>
-
+    <% if(locals.teamInfo) { %>
+      <div class="main-container">
+        <div class="content-div">
+          <img class="team-logo" src=<%=teamInfo.teamBadge %>>
+          <h2 class="team-name"> <%=teamInfo.teamName %> </h2>
+          <h4 class="main-info"> Nationality: <%=teamInfo.country %></h4>
+          <h4 class="main-info"> Founded: <%=teamInfo.founded %> </h4>
+          <h4 class="main-info"> Home Stadium: <%=teamInfo.stadium %></h4>
+        </div>
+        <div class="whatever-div">
+          
+          <ol>
+            <% teamPlayers.forEach(player => { %>
+              <li>
+                Player Name: <%= player.name %><br>
+                Jersey Number: <%= player.number %><br>
+                Position: <%= player.position %><br>
+                Age: <%= player.age %><br>
+                <hr>
+              </li>
+            <% }); %>
+          </ol>
+          
+          
+        </div>
+      </div>
+    <% } %>
   </div>
 </body>
 </html>

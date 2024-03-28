@@ -1,7 +1,22 @@
 .container{
+    height: 97vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 50px;
+}
+
+ol {
+  height: 450px;
+  overflow-y: auto;
+}
+
+ol * {
+  margin-bottom: 5px;
+}
+
+ol *:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  background-color: #50727B;
 }
 
 .header-div {
@@ -33,6 +48,29 @@
 
   .search-flex {
     display: flex;
+    justify-content: center;
     gap: 10px;
   }
 
+  .content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-div * {
+    margin: 10px 0px 10px 0px;
+  }
+  
+.team-logo {
+  text-align: center;
+}
+.team-name {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+}
