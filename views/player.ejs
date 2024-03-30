@@ -10,21 +10,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container"> 
-  <div class="header-div">
-    <div>
-      <h1 class="header">Player</h1>
+  <div class="container-div">
+    <div class="container"> 
+      <div class="header-div">
+        <div>
+          <h1 class="header">Player</h1>
+        </div>
+        <form class="search-flex" method="POST" action="/players">
+          <input type="text" placeholder="Enter Players First Inicial" id="playerNameInput" name="playerName">
+          <input type="text" placeholder="Enter Player Surname" id="playerSurnameInput" name="playerSurname">
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
     </div>
-    <div class="search-flex">
-      <input type="search" placeholder="Enter Player Name">
-      <button class="submit-btn"> Submit </button>
+    <% if(playerInfo && playerSeason) { %>
+    <div class="main-container">
+      <div class="player-info">
+        <img class="info-img" src=<%=player_img %>>
+        <ul class="player-ul">
+          <li><strong>Player Name:</strong> <%= playerInfo.playerName %></li>
+          <li><strong>Number:</strong> <%= playerInfo.number %></li>
+          <li><strong>Position:</strong> <%= playerInfo.position %></li>
+          <li><strong>Player Age:</strong> <%= playerInfo.playerAge %></li>
+        </ul>
+      </div>
+      <div class="player-season">
+        <img class="info-img" src=<%=team_img %>> 
+        <ul class="player-ul">
+          <li><strong>Team:</strong> <%= playerSeason.team %></li>
+          <li><strong>Matches Played:</strong> <%= playerSeason.matches %></li>
+          <li><strong>Goals:</strong> <%= playerSeason.goals %></li>
+          <li><strong>Assists:</strong> <%= playerSeason.assists %></li>
+          <li><strong>Minutes Played:</strong> <%= playerSeason.minutes %></li>
+          <li><strong>Injured Status:</strong> <%= playerSeason.injured %></li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="content-div">
-
-  </div>
-
+    <% } else { %>
+    <div class="main-container">
+      
+    </div>
+    <% } %>
   </div>
 </body>
 </html>

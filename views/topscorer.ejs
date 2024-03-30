@@ -11,19 +11,48 @@
 </head>
 <body>
   <div class="main-container">
-    <div class="header-div"> <h1 class="header">Top Scorers </h1></div>
-    <div class="main-content">
-      <div class="league-div">
-        <div class="league premier-league"> <img src="/images/premier league logo.png"> <h2> Premier League </h2></div>
-        <div class="league la-liga"> <img src="/images/la liga logo.png"> <h2> La Liga </h2></div>
-        <div class="league seria-a"> <img src="/images/seria a logo.png"> <h2> Seria A </h2></div>
-        <div class="league bundes-liga"> <img src="/images/bundesliga logo.png"> <h2> Bundesliga </h2></div>
-        <div class="league league-1"> <img src="/images/league 1 logo.png"> <h2> League 1 </h2></div>
-      </div>
-      <div class="content-div">
-
+    <div class="container"> 
+      <div class="header-div">
+        <div>
+          <form method="get" action="/">
+                <h1 class="header">Top Scorers</h1>
+          </form>
+        </div>
+        <form class="search-flex" method="POST">
+          <input type="text" placeholder="Enter League Name" name="leagueName">
+          <button class="submit-btn" type="submit"> Submit </button>
+        </form>
       </div>
     </div>
+    <% if(locals.top10scorer) { %>
+      <div class="main-container">
+        <div class="nationality-div">
+          <img src=<%=countryFlag %>>
+          <img src=<%=leagueLogo %>>
+        </div>
+        <div class="content-div">
+          <ol>
+            <% top10scorer.forEach(player => { %>
+              <li>
+                <strong>Player Name:</strong> <%= player.player_name %> 
+                <br>
+                <strong>Team:</strong> <%= player.team_name %>
+                <br>
+                <strong>Goals:</strong> <%= player.goals %>
+                <br>
+                <strong>Assists:</strong> <%= player.assists %>
+                <br>
+                <strong>Penalty Goals:</strong> <%= player.penalty_goals %>
+                <br>
+                <hr>
+              </li>
+            <% }); %>
+          </ol>
+        </div>
+        <div class="whatever-div">
+        </div>
+      </div>
+    <% } %>
   </div>
 </body>
 </html>

@@ -1,8 +1,8 @@
-.container-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 50px;
+.main-container {
+display: flex;
+flex-direction: column;
+gap: 30px;
+height: 97vh;
 }
 
 .container{
@@ -12,7 +12,7 @@
 }
 
 .header-div {
-    justify-content: center;  
+    justify-content: center;
 }
 
 .header {
@@ -43,22 +43,43 @@
     gap: 10px;
   }
 
-  .main-container {
-    display: flex;
-    justify-content: space-evenly;
+  .content-div {
+    height: 97vh;
   }
 
-  .info-img {
-    height: 150px;
-    width: 150px;
-  }
+.team-item {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  flex: 1fr
+}
 
-  .player-ul {
-    list-style: none;
-    padding: 0px;
-  }
-  
-  .player-ul * li {
-    text-decoration: none;
-  }
-  
+.team-item span {
+  width: 100px;
+  background-color: #45a049;
+}
+
+
+.team-logo {
+  height: 25px;
+  width: 25px;
+}
+
+.team-list {
+  display: flex;
+  align-items: center;
+}
+
+.standings-table li {
+  margin-bottom: 10px;
+}
+.border-span {
+  border-right: 1px gray solid;
+}
+.team-name {
+  margin-left: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootballPedia ⚽ | competitions</title>
+    <link rel="stylesheet" href="/styles/standings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-container">
+    <div class="container"> 
+      <div class="header-div">
+        <div>
+          <h1 class="header">Standings</h1>
+        </div>
+      <form class="search-flex" method="POST">
+        <input type="text" placeholder="Enter League Name" name="leagueName">
+        <button class="submit-btn" type="submit"> Submit </button>
+      </form>
+      </div>
+    </div>
+    <% if(locals.standings) { %>
+
+      <div class="content-div">
+        <ol class="standings-table">
+          <li class="team-item">
+            <span class="league-position">Club</span>
+            <span></span>
+            <span class="team-name border-span"></span>
+          </li>
+          <hr>
+          <% standings.forEach(club => { %>
+            <li class="team-item">
+              <span class="league-position"> <%= club.overall_league_position %>. </span>
+              <span><img class="team-logo" src="<%= club.team_badge %>" alt="<%= club.team_name %> Logo"></span>
+              <span class="team-name border-span"><%= club.team_name %></span>
+              
+            </li>
+            <hr>
+          <% }); %>
+        </ol>
+      </div>
+      
+
+    <% } %>  
+  </div>
+</body>
+</html>

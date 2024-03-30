@@ -1,0 +1,11 @@
+1. APIkey=a660bc0ea58131fa93415e4bc72b8c5a5e72fd9415ae13b36205682015d5f626
+
+2. https://apifootball.com/documentation/ - main documentation
+
+3. https://apiv3.apifootball.com/?action=get_teams&league_id=302&APIkey=a660bc0ea58131fa93415e4bc72b8c5a5e72fd9415ae13b36205682015d5f626 - players 
+
+4. https://apiv3.apifootball.com/?action=get_leagues&country_id=6&APIkey=xxxxxxxxxxxxxx - national competitions
+
+(https://apiv3.apifootball.com/?action=get_countries&APIkey=xxxxxxxxxxxxxx)- contrys to get by name
+
+5.https://apiv3.apifootball.com/?action=get_topscorers&league_id=302&APIkey=a660bc0ea58131fa93415e4bc72b8c5a5e72fd9415ae13b36205682015d5f626 - top scorers

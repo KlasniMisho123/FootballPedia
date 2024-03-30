@@ -13,9 +13,14 @@
   <div class="container"> 
     <div class="header-div">
       <div>
-        <h1 class="header">Teams</h1>
+        <form method="get" action="/">
+          <a style="text-decoration: none;" href="/">
+              <h1 class="header">Teams</h1>
+          </a>
+        </form>
       </div>
       <form class="search-flex" method="POST">
+        <input type="text" placeholder="Enter League Name" id="leagueNameInput" name="leagueName">
         <input type="text" placeholder="Enter Team Name" id="teamNameInput" name="teamName">
         <button class="submit-btn" type="submit"> Submit </button>
       </form>
