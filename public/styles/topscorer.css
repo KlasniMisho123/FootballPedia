@@ -1,3 +1,16 @@
+.backout-logo {
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  border-radius: 300%;
+  border: 1px gray solid;
+  background-color: #76ABAE;
+}
+
+.backout-logo:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 .main-container{
   display: flex;
   flex-direction: column;

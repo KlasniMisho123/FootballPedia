@@ -45,9 +45,8 @@
   color: white;
 }
 
-
-
 .title-ball {
     height: 100px;
     width: 160px;
+    opacity: 200%;
 }

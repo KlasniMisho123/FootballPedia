@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 </head>
 <body>
+  <form class="backout">
+    <a href="/">
+      <img class="backout-logo" src="images/football ball.png">
+    </a>
+  </form>
   <div class="main-container">
     <div class="container"> 
       <div class="header-div">
@@ -27,50 +32,35 @@
       <div class="content-div">
         <ol class="standings-table">
           <li class="team-item">
-            <span class="league-position standing-title">Club</span>
-            <span></span>
-            <span class="team-name"></span>
+            <span class="standing-title">Club</span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class="space-span"></span>
+            <span>Mp</span>
+            <span>W</span>
+            <span>D</span>
+            <span>L</span>
+            <span>Pts</span>
+            <span>GF</span>
+            <span>GA</span>
+            <span>GD</span>
           </li>
-          <hr>
           <% standings.forEach(club => { %>
             <li class="team-item">
               <span class="league-position"> <%= club.overall_league_position %>. </span>
               <span><img class="team-logo" src="<%= club.team_badge %>" alt="<%= club.team_name %> Logo"></span>
               <span class="team-name "><%= club.team_name %></span>
-            </li>
-            <hr>
-          <% }); %>
-            
-        </ol>
-        <ol class="stats-table">
-          <li class="stat-item standing-title">
               <span class="space-span"></span>
-              <span>Mp</span>
-              <span>W</span>
-              <span>D</span>
-              <span>L</span>
-              <span>Pts</span>
-              <span>GF</span>
-              <span>GA</span>
-              <span>GD</span>
-          </li>
-          <hr />
-          <% standings.forEach(club => { %>
-              <li class="stat-item">
-                  <span class="space-span"></span>
-                  <span><%= club.overall_league_payed %></span>
-                  <span><%= club.overall_league_W %></span>
-                  <span><%= club.overall_league_D %></span>
-                  <span><%= club.overall_league_L %></span>
-                  <span><%= club.overall_league_PTS %></span>
-                  <span><%= club.overall_league_GF %></span>
-                  <span><%= club.overall_league_GA %></span>
-                  <span><%= club.overall_league_GF - club.overall_league_GA %></span>   
-              </li>
-              <hr />
+              <span><%= club.overall_league_payed %></span>
+              <span><%= club.overall_league_W %></span>
+              <span><%= club.overall_league_D %></span>
+              <span><%= club.overall_league_L %></span>
+              <span><%= club.overall_league_PTS %></span>
+              <span><%= club.overall_league_GF %></span>
+              <span><%= club.overall_league_GA %></span>
+              <span><%= club.overall_league_GF - club.overall_league_GA %></span>   
+            </li>
           <% }); %>
-      </ol>
-      
       </div>
        
     <% } %>  
