@@ -42,9 +42,8 @@ app.post("/teams", async (req, res) => {
 
     const resultId = await axios.get(`https://apiv3.apifootball.com/?action=get_leagues&APIkey=${APIkey}`)
     const leagueIdData = resultId.data
-    const selectedLeagueData = leagueIdData.find(league => league.league_name.toLowerCase().replace(" ","") === selectedLeague.toLowerCase().replace(" ",""))
+    const selectedLeagueData = leagueIdData.find(league => league.league_name.toLowerCase().replace(" ","").replace("-","") === selectedLeague.toLowerCase().replace(" ","").replace("-",""))
     const selectedId = selectedLeagueData.league_id
-    console.log(selectedId)
 
     const result = await axios.get(`https://apiv3.apifootball.com/?action=get_teams&league_id=${selectedId}&APIkey=${APIkey}`);
     const teamsData = result.data;
