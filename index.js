@@ -203,8 +203,9 @@ app.post("/standings", async (req,res) => {
     const standingsData = standings.data
 
     res.render("standings.ejs", {
-      standings: standingsData
-    })
+      standings: standingsData,
+    });
+
   } catch(error) {
     
    res.render("standings.ejs") 

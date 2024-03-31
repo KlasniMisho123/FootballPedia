@@ -45,13 +45,26 @@ height: 97vh;
 
   .content-div {
     height: 97vh;
-  }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1; 
+}
+
 
 .team-item {
   display: flex;
   flex-direction: row;
   width: 200px;
   flex: 1fr
+}
+
+.standings-table li {
+  height: 50px;
+}
+
+.stats-table li {
+  height: 50px;
 }
 
 .team-item span {
@@ -66,20 +79,51 @@ height: 97vh;
 }
 
 .team-list {
-  display: flex;
+   display: flex;
   align-items: center;
+}
+
+.standings-table  {
+  width: 14%;
 }
 
 .standings-table li {
   margin-bottom: 10px;
 }
-.border-span {
-  border-right: 1px gray solid;
+
+.stats-table  {
+  list-style-type: none;
 }
+
+.stats-table li {
+
+}
+
+.stat-item {
+  display: flex;
+  width: 900px;
+}
+
+.stat-item span {
+  flex-grow: 1;
+  text-align: center;
+  border-right: 1px gray solid;
+  max-width: 100px;
+  min-width: 100px;
+  background-color: #78A083;
+}
+
 .team-name {
-  margin-left: 10px;
   display: flex;
   gap: 10px;
 }
 
+.standing-title * {
+  font-weight: bold;
+}
+
+.standings-table {
+  margin: 0px;
+  padding: 0px;
+}
 
